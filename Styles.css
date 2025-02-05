@@ -1,123 +1,158 @@
-/* Dark theme colors */
-:root {
-    --background-color: #121212;
-    --card-bg: #1e1e1e;
-    --text-color: #e0e0e0;
-    --accent-color: #33ccff;
-    --hover-color: #00ff99;
-    --border-radius: 10px;
-}
-
-/* Reset & Basic Styling */
+/* Cyberpunk Theme Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: var(--background-color);
-    color: var(--text-color);
+    background: #0d0d0d;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-/* Navigation Bar */
 .navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: var(--card-bg);
-    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
 }
 
-.navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar-links a:hover {
-    color: var(--hover-color);
-}
-
-/* Owner Info */
-.owner-info {
+.navbar-content {
     display: flex;
     align-items: center;
 }
 
 .owner-image {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-    border: 2px solid var(--accent-color);
+    border: 2px solid #33ccff;
+    box-shadow: 0 0 10px #33ccff;
 }
 
-/* Container */
+.owner-name {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    margin-right: 20px;
+}
+
+.info-link {
+    color: #33ccff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #33ccff;
+    transition: 0.3s;
+}
+
+.info-link:hover {
+    color: #ff00ff;
+    border-bottom: 2px solid #ff00ff;
+}
+
 .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(51, 204, 255, 0.3);
+    text-align: center;
+    margin-top: 50px;
 }
 
-/* Document List */
+h1 {
+    font-size: 2rem;
+    color: #33ccff;
+    text-shadow: 0 0 15px #33ccff;
+}
+
 .document-list {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px #33ccff;
+    backdrop-filter: blur(10px);
 }
 
-.loading-text {
-    text-align: center;
-    font-size: 1.2em;
-    animation: fadeIn 1.5s infinite alternate;
+.document-item {
+    padding: 10px;
+    border-bottom: 1px solid #33ccff;
 }
 
-/* Viewer */
-.document-viewer {
+.document-item a {
+    color: #ff00ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.document-item a:hover {
+    color: #33ccff;
+}
+
+.viewer {
     display: none;
-    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #viewer-frame {
     width: 100%;
-    height: 500px;
+    height: 90%;
     border: none;
-    background: var(--background-color);
-    box-shadow: 0px 0px 10px rgba(51, 204, 255, 0.3);
-    border-radius: var(--border-radius);
 }
 
-/* Close Button */
 .close-btn {
-    margin: 10px;
-    padding: 10px 20px;
-    background: var(--accent-color);
-    color: #121212;
+    background: #ff00ff;
     border: none;
-    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    color: #fff;
+    box-shadow: 0 0 10px #ff00ff;
+    transition: 0.3s;
 }
 
 .close-btn:hover {
-    background: var(--hover-color);
+    background: #33ccff;
+    box-shadow: 0 0 10px #33ccff;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
+@keyframes hackerEffect {
+    0% { opacity: 0.2; transform: translateY(0); }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
 }
+
+.hacker-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    font-size: 20px;
+    color: rgba(0, 255, 0, 0.2);
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.byte {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(0, 255, 0, 0.3);
+    animation: hackerEffect 3s infinite;
+}
+

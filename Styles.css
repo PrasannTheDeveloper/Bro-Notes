@@ -1,7 +1,7 @@
-/* Cyberpunk Theme Styles */
+/* Light & Colorful Theme Styles */
 body {
-    background: #0d0d0d;
-    color: #fff;
+    background: #f5f5f5;
+    color: #333;
     font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,14 +9,14 @@ body {
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 2px solid #ff00ff;
-    box-shadow: 0 0 15px #ff00ff;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ff69b4;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
 }
 
 .navbar-content {
@@ -35,8 +35,8 @@ body {
 
 .owner-name {
     font-size: 1.5rem;
-    color: #ff00ff;
-    text-shadow: 0 0 10px #ff00ff;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4;
     margin-right: 20px;
 }
 
@@ -49,8 +49,8 @@ body {
 }
 
 .info-link:hover {
-    color: #ff00ff;
-    border-bottom: 2px solid #ff00ff;
+    color: #ff69b4;
+    border-bottom: 2px solid #ff69b4;
 }
 
 .container {
@@ -59,18 +59,18 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #33ccff;
     text-shadow: 0 0 15px #33ccff;
 }
 
 .document-list {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
-    width: 80%;
-    max-height: 400px;
+    width: 90%;
+    max-height: 500px;
     overflow-y: auto;
     box-shadow: 0 0 10px #33ccff;
     backdrop-filter: blur(10px);
@@ -82,7 +82,7 @@ h1 {
 }
 
 .document-item a {
-    color: #ff00ff;
+    color: #ff69b4;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -97,11 +97,11 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 90%;
     height: 80%;
-    background: rgba(0, 0, 0, 0.9);
-    border: 2px solid #ff00ff;
-    box-shadow: 0 0 20px #ff00ff;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ff69b4;
+    box-shadow: 0 0 20px #ff69b4;
     padding: 10px;
     border-radius: 10px;
 }
@@ -113,13 +113,13 @@ h1 {
 }
 
 .close-btn {
-    background: #ff00ff;
+    background: #ff69b4;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
     color: #fff;
-    box-shadow: 0 0 10px #ff00ff;
+    box-shadow: 0 0 10px #ff69b4;
     transition: 0.3s;
 }
 
@@ -156,3 +156,38 @@ h1 {
     animation: hackerEffect 3s infinite;
 }
 
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .document-list {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .viewer {
+        width: 95%;
+        height: 75%;
+    }
+
+    .document-item a {
+        font-size: 1.1rem;
+    }
+
+    .close-btn {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,123 @@
+/* Dark theme colors */
+:root {
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #33ccff;
+    --hover-color: #00ff99;
+    --border-radius: 10px;
+}
+
+/* Reset & Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--card-bg);
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: var(--hover-color);
+}
+
+/* Owner Info */
+.owner-info {
+    display: flex;
+    align-items: center;
+}
+
+.owner-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid var(--accent-color);
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(51, 204, 255, 0.3);
+}
+
+/* Document List */
+.document-list {
+    padding: 20px;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 1.2em;
+    animation: fadeIn 1.5s infinite alternate;
+}
+
+/* Viewer */
+.document-viewer {
+    display: none;
+    text-align: center;
+}
+
+#viewer-frame {
+    width: 100%;
+    height: 500px;
+    border: none;
+    background: var(--background-color);
+    box-shadow: 0px 0px 10px rgba(51, 204, 255, 0.3);
+    border-radius: var(--border-radius);
+}
+
+/* Close Button */
+.close-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: #121212;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    background: var(--hover-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}

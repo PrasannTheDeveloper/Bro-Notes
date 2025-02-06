@@ -19,7 +19,7 @@
         /* Navbar style */
         .navbar-content {
             
-            background-color: rgb(227, 255, 246); /* Set navbar background to white */
+            background-color: rgb(255, 227, 252); /* Set navbar background to white */
             padding: 10px 20px;
         }
 
@@ -64,10 +64,48 @@ footer {
     .owner-name{
         font-size: 2em;
     }
+
+
+
+    /* Default (for large screens) */
+.overlay-image {
+    position: fixed;
+    bottom: 0;
+    right: -380px;
+    height: 660px; /* Full size for larger screens */
+    width: auto;
+    max-width: 100%;
+    animation: floatAnimation 3s infinite ease-in-out;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .overlay-image {
+        height: 250px; /* Reduce size for mobile */
+        right: 0px; /* Adjust positioning */
+        opacity: 0.8; /* Slight transparency to blend better */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-image {
+        height: 180px; /* Even smaller on very small screens */
+        right: 10px; /* Ensure it's fully visible */
+        bottom: 10px;
+    }
+}
+
+/* Floating animation */
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
     </style>
 </head>
 <body>
-    <div class="hacker-bg" id="hacker-bg"></div>
+   
 
     <div class="navbar-content">
         <img src="profile.jpg" alt="Prasann Gaikawad" class="owner-image">
@@ -87,6 +125,8 @@ footer {
         <button class="close-btn" onclick="closeViewer()">Close</button>
         <iframe id="viewer-frame"></iframe>
     </div>
+    <img class="overlay-image" src="overlay.png" alt="Overlay Image">
+
 
     <footer>
         <p>GitHub - PrasannTheDeveloper</p>

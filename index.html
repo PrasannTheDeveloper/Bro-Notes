@@ -19,7 +19,7 @@
         /* Navbar style */
         .navbar-content {
             
-            background-color: white; /* Set navbar background to white */
+            background-color: rgb(227, 255, 246); /* Set navbar background to white */
             padding: 10px 20px;
         }
 
@@ -40,36 +40,59 @@
             font-size: 16px;
         }
 
-        /* Add blur effect to h1 */
+       
         h1 {
-            backdrop-filter: blur(10px); /* Apply blur effect to the background */
+            backdrop-filter: blur(10px); 
             padding: 20px;
-            margin-left : 30px;
             color: white;
             font-size: 2em;
         }
+        h2{
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+footer {
+    backdrop-filter: blur(10px);
+    text-align: center; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    color: white;
+    padding: 10px 0; 
+}
+    .owner-name{
+        font-size: 2em;
+    }
     </style>
 </head>
 <body>
     <div class="hacker-bg" id="hacker-bg"></div>
 
     <div class="navbar-content">
-        <img src="owner-image.png" alt="Prasann Gaikawad" class="owner-image">
-        <span class="owner-name" style="margin-left:40px;">More about owner </span>
-        <a>BRO - BCA 4th SEM DOCUMENTS... </a>
+        <img src="profile.jpg" alt="Prasann Gaikawad" class="owner-image">
+        <span class="owner-name" style="margin-left: 20px;">BRO - BCA 4TH SEM DOCUMENTS...</span>
+        
         <a href="#" class="info-link">  </a>
     </div>
 
     <div class="container">
-        <h1>📂 Bro - Documents </h1>
-        <h3>--Live Documents Updates--</h3>
+        <h1>📂 Bro Document </h1>
+        <h2 style="margin-left: 50px;">-Live Document Updates-</h2>
         <div id="document-list" class="document-list"></div>
     </div>
+
 
     <div id="document-viewer" class="viewer">
         <button class="close-btn" onclick="closeViewer()">Close</button>
         <iframe id="viewer-frame"></iframe>
     </div>
+
+    <footer>
+        <p>GitHub - PrasannTheDeveloper</p>
+        <p>© 2025 <button onclick="window.location.href='https://www.instagram.com/prasann_gaikawad/'">Click here</button> to know more about the owner.</p>
+    </footer>
+    
 
     <script src="script.js"></script>
 </body>

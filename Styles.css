@@ -9,12 +9,13 @@ body {
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.8);
+    background: bisque;
     backdrop-filter: blur(30px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 15px 90px;
+    
     border-bottom: 2px solid #ff69b4;
     box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
 }
@@ -35,12 +36,13 @@ body {
 
 .owner-name {
     font-size: 1.5rem;
-    color: red;
-    text-shadow: 0 0 10px #33ccff ;
+   
+    -webkit-text-stroke: 1px rgb(180, 180, 180); /* Black text border */
     margin-right: 20px;
-
-
+    font-weight: bold;
 }
+
+
 
 .info-link {
     color: #33ccff;
@@ -60,6 +62,7 @@ body {
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+   
 }
 
 h1 {
@@ -69,7 +72,7 @@ h1 {
 }
 
 .document-list {
-    background: rgba(255, 255, 255, 0.8);
+    background: beige;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -159,9 +162,9 @@ h1 {
         margin-top: 20px;
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
+            h1 {
+                font-size: 1.8rem;
+            }
 
     .document-list {
         width: 95%;

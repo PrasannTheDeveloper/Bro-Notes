@@ -35,9 +35,11 @@ body {
 
 .owner-name {
     font-size: 1.5rem;
-    color: #ff69b4;
-    text-shadow: 0 0 10px #ff69b4;
+    color: red;
+    text-shadow: 0 0 10px #33ccff ;
     margin-right: 20px;
+
+
 }
 
 .info-link {
@@ -49,7 +51,7 @@ body {
 }
 
 .info-link:hover {
-    color: skyblue;
+    color: #ff69b4;
     border-bottom: 2px solid #ff69b4;
 }
 
@@ -84,7 +86,7 @@ h1 {
 }
 
 .document-item a {
-    color: #ff69b4;
+    color: blueviolet;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -115,7 +117,7 @@ h1 {
 }
 
 .close-btn {
-    background: #ff69b4;
+    background: skyblue;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;

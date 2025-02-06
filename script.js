@@ -113,3 +113,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Generate bytes continuously
     setInterval(createByte, 200);
 });
+

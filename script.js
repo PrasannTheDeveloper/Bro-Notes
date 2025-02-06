@@ -89,28 +89,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("document-viewer").style.display = "none";
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const hackerBg = document.getElementById("hacker-bg");
-
-    function createByte() {
-        const byte = document.createElement("div");
-        byte.classList.add("byte");
-        byte.textContent = Math.random() > 0.5 ? "0" : "1"; // You can also use random hex characters
-        
-        // Set random position
-        byte.style.left = Math.random() * 100 + "vw";
-        byte.style.top = Math.random() * 100 + "vh";
-        
-        // Set random animation duration
-        byte.style.animationDuration = Math.random() * 2 + 2 + "s";
-        
-        hackerBg.appendChild(byte);
-        
-        // Remove byte after animation
-        setTimeout(() => byte.remove(), 3000);
-    }
-
-    // Generate bytes continuously
-    setInterval(createByte, 200);
-});
 
